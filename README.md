@@ -15,8 +15,8 @@
 This is iOS application which is basically created for ssl pinning using URLSession. In this both type of pinning is implemented (Certificate & Public Key)
 
 ## Screenshots
-![Certificate Pinning](./img/CertificatePinning.png?raw=true "2. Home Screen")
-![Public Pinning](./img/PublicKeyPinning.png?raw=true "3. Home Screen")
+<img width="320" src="./img/CertificatePinning.png?raw=true">
+<img width="320" src="./img/PublicKeyPinning.png?raw=true">
 
 ## Technologies
 * Platform iOS, iPad
