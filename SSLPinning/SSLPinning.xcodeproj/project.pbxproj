@@ -106,16 +106,12 @@
 		757BB83323DC89CB008CF013 /* SSLPinning */ = {
 			isa = PBXGroup;
 			children = (
-				82E996D82771374A0013B258 /* google.cer */,
+				82E996DC2771647A0013B258 /* Resources */,
 				757BB83423DC89CB008CF013 /* AppDelegate.swift */,
 				757BB83623DC89CB008CF013 /* SceneDelegate.swift */,
 				757BB83823DC89CB008CF013 /* ViewController.swift */,
 				757BB86723DCE36A008CF013 /* ServiceManager.swift */,
 				82E996DA277149A90013B258 /* SSLPinningManager.swift */,
-				757BB83A23DC89CB008CF013 /* Main.storyboard */,
-				757BB83D23DC89CD008CF013 /* Assets.xcassets */,
-				757BB83F23DC89CD008CF013 /* LaunchScreen.storyboard */,
-				757BB84223DC89CD008CF013 /* Info.plist */,
 			);
 			path = SSLPinning;
 			sourceTree = "<group>";
@@ -136,6 +132,18 @@
 				757BB85823DC89CD008CF013 /* Info.plist */,
 			);
 			path = SSLPinningUITests;
+			sourceTree = "<group>";
+		};
+		82E996DC2771647A0013B258 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82E996D82771374A0013B258 /* google.cer */,
+				757BB83A23DC89CB008CF013 /* Main.storyboard */,
+				757BB83D23DC89CD008CF013 /* Assets.xcassets */,
+				757BB83F23DC89CD008CF013 /* LaunchScreen.storyboard */,
+				757BB84223DC89CD008CF013 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SSLPinning/Info.plist;
+				INFOPLIST_FILE = SSLPinning/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,7 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SSLPinning/Info.plist;
+				INFOPLIST_FILE = SSLPinning/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -18,6 +18,8 @@ class ServiceManager: NSObject {
             delegateQueue: nil
         )
 
+        
+
         var responseMessage = ""
         let task = session.dataTask(with: url) { data, _, error in
             if let error = error {

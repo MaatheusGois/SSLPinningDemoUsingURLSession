@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+final class ViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,22 +20,20 @@ class ViewController: UIViewController {
         guard let url = URL(string: "https://www.google.com") else { return }
 
         ServiceManager.callAPI(url) { message in
-            let alert = UIAlertController(
-                title: "SSLPinning",
-                message: message,
-                preferredStyle: .alert
-            )
-
-            alert.addAction(
-                UIAlertAction(
-                    title: "OK",
-                    style: .default,
-                    handler: nil
-                )
-            )
-
-            self.present(alert, animated: true, completion: nil)
+            self.alert(message)
         }
     }
 }
 
+fileprivate extension UIViewController {
+    func alert(_ message: String) {
+        let alert = UIAlertController(
+            title: "SSLPinning",
+            message: message,
+            preferredStyle: .alert
+        )
+
+        alert.addAction(.init(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+}
