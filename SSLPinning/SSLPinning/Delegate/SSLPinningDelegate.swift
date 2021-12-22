@@ -10,7 +10,7 @@ import Foundation
 import CommonCrypto
 import CryptoKit
 
-class SSLPinningManager: NSObject, URLSessionDelegate {
+class SSLPinningDelegate: NSObject, URLSessionDelegate {
     var localCertificate: Data? {
         guard let localCertificateUrl = Bundle.main.url(forResource: "google", withExtension: ".cer")  else { return nil }
         return try? Data(contentsOf: localCertificateUrl)
@@ -42,7 +42,7 @@ class SSLPinningManager: NSObject, URLSessionDelegate {
     }
 }
 
-fileprivate extension SSLPinningManager {
+fileprivate extension SSLPinningDelegate {
     func validate(for trust: SecTrust, with policy: SecPolicy = SecPolicyCreateBasicX509()) -> Bool {
         let status = SecTrustSetPolicies(trust, policy)
         guard status == errSecSuccess else { return false }

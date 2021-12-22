@@ -14,7 +14,7 @@ class ServiceManager: NSObject {
     static func callAPI(_ url: URL, completion: @escaping (String) -> Void) {
         let session = URLSession(
             configuration: .ephemeral,
-            delegate: SSLPinningManager(),
+            delegate: SSLPinningDelegate(),
             delegateQueue: nil
         )
 
